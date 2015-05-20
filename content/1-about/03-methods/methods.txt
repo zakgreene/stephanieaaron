@@ -1,0 +1,55 @@
+Title: Methods
+
+----
+
+Text: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+----
+
+Methods: 
+
+- 
+  title: Discover
+  desc: |
+    * Competitive Reviews
+    * Content Audits
+    * Stakeholder Interviews
+    * User Research
+    * User Interviews
+    * Web analytics
+- 
+  title: Define
+  desc: |
+    * Competitive Reviews
+    * Content Audits
+    * Stakeholder Interviews
+    * User Research
+    * User Interviews
+    * Web analytics
+- 
+  title: Design
+  desc: |
+    * Competitive Reviews
+    * Content Audits
+    * Stakeholder Interviews
+    * User Research
+    * User Interviews
+    * Web analytics
+- 
+  title: Develop
+  desc: |
+    * Competitive Reviews
+    * Content Audits
+    * Stakeholder Interviews
+    * User Research
+    * User Interviews
+    * Web analytics
+- 
+  title: Deploy
+  desc: |
+    * Competitive Reviews
+    * Content Audits
+    * Stakeholder Interviews
+    * User Research
+    * User Interviews
+    * Web analytics

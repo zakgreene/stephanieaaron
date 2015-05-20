@@ -2,18 +2,30 @@ Title: Contact
 
 ----
 
-Text:
+Text: 
 
-## Get in touch
+If you’d like to collaborate on creating great experience for people – please contact me.
 
-- (link: http://getkirby.com/support text: Kirby's support page)
-- (link: http://getkirby.com/forum text: Kirby's forum)
-- (link: http://github.com/getkirby text: Kirby on Github)
-- <support@getkirby.com>
+I am available for contract projects and full-time employment.
 
-## Follow us on Twitter
+----
 
-- Follow Kirby on Twitter (twitter: @getkirby)
-- Follow Bastian on Twitter (twitter: @bastianallgeier)
-- Follow Sascha on Twitter (twitter: @sashtown)
+Contacts: 
 
+- 
+  title: Email
+  link: mailto:stephanieaaron@me.com
+  desc:
+- 
+  title: Call
+  link:
+  desc: 212 414 1522
+- 
+  title: Read
+  link: http://twitter.com/stephanieaaron
+  desc:
+- 
+  title: Connect
+  link: >
+    https://www.linkedin.com/in/stephanieaaron
+  desc:

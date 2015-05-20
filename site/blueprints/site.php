@@ -9,6 +9,9 @@ fields:
   author:
     label: Author
     type:  text
+  practice:
+    label: Practice
+    type: text
   description:
     label: Description
     type:  textarea

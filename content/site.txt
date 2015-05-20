@@ -1,8 +1,8 @@
-Title: Kirby Starterkit
+Title: Aaron Design
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Stephanie Aaron
 
 ----
 
@@ -10,8 +10,12 @@ Description: This is Kirby's Starterkit.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: design,web,interaction
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: © (date: Year) Stephanie Aaron
+
+----
+
+Practice: Interaction Design

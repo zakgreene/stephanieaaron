@@ -1,0 +1,63 @@
+Title: Bio
+
+----
+
+Text: 
+
+#### Stephanie Aaron
+
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+
+----
+
+Sidebar: 
+
+### Areas of Expertise
+
+* Interaction Design
+* Experience Design
+* Service Design
+* Visual Design
+* Branding
+* Project Management
+
+### UX Skills
+
+* User Research
+* Information Architecture
+* Sketching
+* Wireframing
+* Prototyping
+
+### Relevant Tools
+
+* Axure
+* Balsamiq
+* Illustrator
+* InDesign
+* Keynote
+* OmniGraffle
+* Pencil & Paper
+* Photoshop
+* POP
+* Sketch
+
+----
+
+Image: stephanie.png
+
+----
+
+More: In vel quam quod ad futurum. Videntur vulputate luptatum typi gothica et. Legunt dolore eorum claritas dynamicus qui. Demonstraverunt wisi consequat duis esse dolore. Nunc nisl et lectores tempor esse. Ex iis parum vel est soluta.
+
+----
+
+Links: 
+
+- 
+  title: Download CV
+  link: http://zakgreene.com/Zak_Greene_CV.pdf
+- 
+  title: Connect
+  link: >
+    https://www.linkedin.com/in/stephanieaaron

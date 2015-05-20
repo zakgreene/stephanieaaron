@@ -1,0 +1,779 @@
+@import "icons";
+
+$red:           #ff4337;
+$dark-red:      darken($red, 15%);
+$yellow:        #fec00f;
+$blue:          #0ac1e6;
+
+$light-grey:    #cbcbcb;
+$mid-grey:      #a5a5a5;
+$bg-grey:       #f3eee9;
+$cool-grey:     #e9efef;
+
+$base:          14px;
+$text-font:     "news-gothic-std", "Helvetica Neue", Helvetica, Arial, Helmet, Freesans,sans-serif;
+
+@mixin title-font {
+    font-family: "franklin-gothic-urw", "Helvetica Neue", Helvetica, Arial, Helmet, Freesans, sans-serif;
+    font-size: 1.14em;
+    font-weight: 900;
+}
+
+@mixin transition ($transition: all 0.2s) {
+    -webkit-transition: $transition;
+    -moz-transition:    $transition;
+    -ms-transition:     $transition;
+    -o-transition:      $transition;
+    transition:         $transition;
+    -webkit-backface-visibility: hidden;
+}
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content:" ";
+        display:table;
+    }
+    &:after { clear:both; }
+    & { *zoom:1; }
+}
+
+
+body, select, input, textarea {color: #000;}
+
+a {
+    color: $red;
+    text-decoration: none;
+    @include transition;
+}
+
+a:hover {
+    color: $dark-red;
+}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: $dark-red; color: #fff; text-shadow: none;}
+::selection {background: $dark-red; color: #fff; text-shadow: none;} 
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: $dark-red;} 
+
+ins {background-color: $dark-red; color: #000; text-decoration: none;}
+mark {background-color: $dark-red; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder { color:#a9a9a9; }
+textarea:-moz-placeholder { color:#a9a9a9; }
+
+body {
+    background: $red;
+    color: #000;
+    font-family: $text-font;
+    font-size: $base;
+    line-height: 1.5em;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5em 20px;
+    position: relative;
+}
+
+header.site-title {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    text-align: right;
+    line-height: 17px;
+    width: 100%;
+
+    body > & {
+        z-index: 100;
+        position: fixed;
+        display: block;
+
+        .wrapper {
+            background-image: none;
+        }
+    }
+
+    .wrapper {
+        padding-top: 1.75em;
+        background: url(../logo.png) no-repeat top 1.5em right 1.5em;
+        background-size: 60px;
+        height: 6em;
+        padding-right: 90px;
+
+        a {
+            display: block;
+            color: inherit;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 500;
+            width: 450px;
+            height: 100px;
+        }
+    }
+
+    h1, h2 {
+        display: inline;
+        vertical-align: top;
+        font-size: 1em;
+    }
+
+    h1 {
+        @include title-font;
+        margin-right: 0.25em;
+        vertical-align: baseline;
+    }
+
+    h2 {
+        font-family: $text-font;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin-left: 0.25em;
+        margin-bottom: 2em;
+        font-size: 0.9em;
+        vertical-align: baseline;
+    }
+
+    img {
+        width: 60px;
+        vertical-align: top;
+        margin-left: 1em;
+    }
+}
+
+h1 {
+    font-size: 2.36em;
+    line-height: 1.1em;
+    font-weight: normal;
+    margin: 1em 0;
+}
+
+h2 {
+    line-height: 1.1em;
+    text-transform: uppercase;
+    @include title-font;
+    margin-right: 0.25em;
+    display: inline-block;
+}
+
+p, ul, ol {
+    margin-bottom: 1em;
+}
+
+.more {
+    display: none;
+}
+
+article {
+    max-width: 18em;
+}
+
+section {
+    position: relative;
+
+    .wrapper {
+        @include clearfix;
+    }
+}
+
+section#intro {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        padding-top: 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin: 0 0 2em;
+        text-align: center;
+    }
+
+    header.site-title {
+        position: fixed;
+        display: block;
+    }
+}
+
+section#bio, section#process, section#methods {
+    h1 {
+        display: inline-block;
+    }
+
+    header.title {
+        color: $red;
+    }
+
+    header.site-title .wrapper {
+        background-image: url(../logo_red.png);
+    }
+}
+
+section#bio {
+    background: #fff;
+
+    header.title {
+        margin-bottom: 2em;
+    }
+
+    #headshot {
+        text-align: center;
+        margin-bottom: 1em;
+
+        img {
+            max-width: 10em;
+        }
+    }
+
+    #bio-text {
+        margin-bottom: 2em;
+        max-width: 31em;
+
+        a[href="#more"] {
+            margin-left: 0.25em;
+
+            &:after {
+                @include icon;
+                content: $chevron-small-down;
+            }
+
+            &.active:after {
+                content: $chevron-small-up;
+            }
+        }
+
+        .more {
+            margin-top: 1em;
+        }
+    }
+
+    h3, h4 {
+        color: $red;
+        @include title-font;
+    }
+
+    h3 {
+        cursor: pointer;
+        margin-bottom: 0.25em;
+        margin-top: 1.5em;
+
+        &:hover {
+            color: $dark-red;
+            @include transition;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &:before {
+            @include icon;
+            content: $plus-circle;
+            margin-right: 0.25em;
+        }
+    }
+
+    h3 + * {
+        display: none;
+    }
+
+    h4 {
+        display: inline;
+    }
+
+    h4 + p {
+        display: inline;
+    }
+
+    aside li {
+        border-bottom: 1px solid $light-grey;
+        padding: 0.25em 0;
+
+        &:first-child {
+            border-top: 1px solid $light-grey;
+        }
+    }
+
+    #bio-links {
+        margin-top: 1em;
+
+        li {
+            display: inline-block;
+            margin-right: 2em;
+        }
+
+        li a:before {
+            @include icon;
+            color: #fff;
+            font-size: 2em;
+            padding: 0.25em;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0.25em 0;
+            margin-right: 0.33em;
+            background: $mid-grey;
+            border-radius: 3em;
+            @include transition;
+        }
+
+        li a:hover:before {
+            background: darken($mid-grey, 10%);
+        }
+
+        #download_cv a:before {
+            content: $doc;
+        }
+
+        #connect a:before {
+            content: $linkedin;
+        }
+
+        a {
+            color: #000;
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+    }
+}
+
+section#process {
+    background: $bg-grey;
+}
+
+section#methods {
+    background: $yellow;
+
+    header.title {
+        color: #fff;
+    }
+
+    h3 {
+        @include title-font;
+        text-transform: uppercase;
+    }
+
+    #methods-list {
+        min-height: 20em;
+        margin-top: 2em;
+
+        & > li {
+            margin-bottom: 1em;
+
+            &:before {
+                @include icon;
+                display: inline-block;
+                width: 1.5em;
+                padding: 0.25em;
+                font-size: 2em;
+                vertical-align: middle;
+                background: #fff;
+                border-radius: 3em;
+            }
+
+            h3 {
+                display: inline-block;
+                margin-left: 2em;
+            }
+
+            &#discover:before {
+                content: $discover;
+            }
+            &#define:before {
+                content: $doc;
+            }
+            &#design:before {
+                content: $design;
+            }
+            &#develop:before {
+                content: $develop;
+            }
+            &#deploy:before {
+                content: $deploy;
+            }
+
+            a {
+                font-size: 1.1em;
+                vertical-align: bottom;
+                display: block;
+
+                &:before {
+                    @include icon;
+                    content: $plus-circle;
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 1em;
+                    margin-right: 0.25em;
+                    margin-left: -1.25em;
+                }
+
+                &.active:before {
+                    color: #fff;
+                    // background: $red;
+                    // border-radius: 1em;
+                }
+            }
+        }
+
+        .more {
+            margin-left: 5.33em;
+        }
+
+        ul {
+            text-align: left;
+            margin-top: 0.5em;
+
+            li:before {
+                content: '\2022'; // bullet
+                color: $red;
+                display: inline-block;
+                width: 0.5em;
+                margin-left: -1em;
+                margin-right: 0.5em;
+            }
+
+            li {
+                margin: 0.25em 0;
+            }
+        }
+    }
+}
+
+section#clients {
+    background: $blue;
+    color: #fff;
+
+    #intro-text, h2 {
+        color: #000;
+    }
+}
+
+section#contact {
+    background: #222;
+    color: #fff;
+
+    header.site-title {
+        z-index: 100;
+
+        .wrapper {
+            background-image: url(../logo_red.png);
+        }
+    }
+
+    li {
+        @include title-font;
+        text-transform: uppercase;
+        font-size: 1.15em;
+        position: relative;
+
+        span {
+            font-family: $text-font;
+            font-weight: normal;
+            font-size: 0.7em;
+            margin-left: 0.5em;
+        }
+
+        a {
+            color: #fff;
+            display: inline-block;
+        }
+    }
+
+    li a:before, #call:before {
+        @include icon;
+        color: #fff;
+        font-size: 1.75em;
+        padding: 0.25em;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0.25em 0;
+        margin-right: 0.33em;
+        background: $red;
+        border-radius: 3em;
+        @include transition;
+    }
+
+    li a:hover {
+        &:before {
+            color: $red;
+            background: #fff;
+        }
+    }
+
+    #email a:before {
+        content: $email;
+    }
+
+    #call:before {
+        content: $call;
+    }
+
+    #read a:before {
+        content: $twitter;
+    }
+
+    #connect a:before {
+        content: $linkedin;
+    }
+}
+
+section#blog {
+    background: $cool-grey;
+
+    header.site-title {
+        z-index: 200;
+
+        .wrapper {
+            background-image: url(../logo_red.png);
+        }
+    }
+}
+
+footer {
+    background: #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    color: $light-grey;
+
+    .wrapper {
+        padding: 1em 1.5em;
+    }
+
+    nav {
+        display: inline-block;
+
+        ul {
+            margin-bottom: 0.25em;
+        }
+
+        li {
+            display: inline-block;
+
+            &:last-child a:after {
+                content: '';
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            font-size: 0.9em;
+
+            &:hover, &.active {
+                color: #fff;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '/';
+                margin: 0 0.5em;
+                color: $red;
+            }
+        }
+    }
+
+    a {
+        color: $light-grey;
+
+        &:hover, &.active {
+            color: #fff;
+        }
+    }
+
+    a[href="#more"] {
+        float: right;
+        font-size: 1.75em;
+        @include transition(none);
+
+        &.active {
+            color: #000;
+
+            :after {
+                @include icon;
+                content: $minus;
+                color: $light-grey;
+            }
+        }
+    }
+
+    .more {
+        font-size: 0.9em;
+        margin-top: 1em;
+    }
+}
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+
+
+@media screen and (min-width: 600px) {
+
+    .wrapper {
+        padding-top: 8em;
+    }
+
+    section#bio {
+        #headshot, #bio-text, aside {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #headshot {
+            width: 16%;
+            margin-right: 2%;
+            max-width: 10em;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        #bio-text {
+            width: 55%;
+        }
+
+        aside {
+            width: 25%;
+            float: right;
+        }
+    }
+
+    section#methods {
+        margin-right: -1em;
+
+        #methods-list {
+            margin-left: 1em;
+
+            & > li {
+                float: left;
+                width: 20%;
+                padding-right: 1em;
+                background: url(../arrow_red.png) no-repeat right 2.75em;
+
+                &:before {
+                    font-size: 3em;
+                    margin: 0.25em 0;
+                }
+
+                &:last-child {
+                    background: none;
+                }
+
+                h3 {
+                    display: block;
+                    margin-left: 0;
+                }
+
+                .more {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    section#clients {
+
+        #intro-text {
+            float: left;
+            width: 23%;
+            font-size: 0.9em;
+            line-height: 1.5em;
+        }
+
+        .columns {
+            float: right;
+            width: 74%;
+        }
+
+        h2 {
+            font-size: 1.05em;
+            margin-bottom: 0.5em;
+        }
+
+        .col {
+            font-size: 0.95em;
+            line-height: 1.4em;
+            display: inline-block;
+            vertical-align: top;
+            width: 30.85%;
+            margin-left: 2.75%;
+
+            ul {
+                margin-bottom: 1.5em;
+            }
+
+            li {
+                margin-bottom: 0.45em;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    section#contact {
+
+        article, ul {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        article {
+            width: 30%;
+        }
+
+        ul {
+            margin-left: 14%;
+            width: 50%;
+        }
+
+        li:first-child a:before {
+            margin-top: 0;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+
+    body {
+        font-size: 16px;
+    }
+
+
+    section#methods {
+        
+        #methods-list {
+            margin-left: 4em;
+        }
+    }
+
+    section#clients .col {
+        font-size: 0.85em;
+        line-height: 1.4em;
+    }
+        
+}
+
+
+
+/* Print styles
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}

@@ -1,0 +1,138 @@
+@font-face {
+	font-family: 'stephanie';
+	src:url('../fonts/stephanie.eot?s93i5n');
+	src:url('../fonts/stephanie.eot?#iefixs93i5n') format('embedded-opentype'),
+		url('../fonts/stephanie.woff?s93i5n') format('woff'),
+		url('../fonts/stephanie.ttf?s93i5n') format('truetype'),
+		url('../fonts/stephanie.svg?s93i5n#stephanie') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'stephanie';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon {
+	font-family: 'stephanie';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+$deploy: "\e606";
+
+$develop: "\e607";
+
+$design: "\e60c";
+
+$discover: "\e60d";
+
+$call: "\e608";
+
+$doc: "\e609";
+
+$email: "\e60a";
+
+$logo: "\e60b";
+
+$chevron-small-down: "\e600";
+
+$chevron-small-up: "\e601";
+
+$minus-circle: "\e602";
+
+$plus-circle: "\e603";
+
+$minus: "\e604";
+
+$plus: "\e605";
+
+$linkedin: "\e60e";
+
+$twitter: "\e60f";
+
+
+
+.icon-deploy:before {
+	content: "\e606";
+}
+
+.icon-develop:before {
+	content: "\e607";
+}
+
+.icon-design:before {
+	content: "\e60c";
+}
+
+.icon-discover:before {
+	content: "\e60d";
+}
+
+.icon-call:before {
+	content: "\e608";
+}
+
+.icon-doc:before {
+	content: "\e609";
+}
+
+.icon-email:before {
+	content: "\e60a";
+}
+
+.icon-logo:before {
+	content: "\e60b";
+}
+
+.icon-chevron-small-down:before {
+	content: "\e600";
+}
+
+.icon-chevron-small-up:before {
+	content: "\e601";
+}
+
+.icon-minus-circle:before {
+	content: "\e602";
+}
+
+.icon-plus-circle:before {
+	content: "\e603";
+}
+
+.icon-minus:before {
+	content: "\e604";
+}
+
+.icon-plus:before {
+	content: "\e605";
+}
+
+.icon-linkedin:before {
+	content: "\e60e";
+}
+
+.icon-twitter:before {
+	content: "\e60f";
+}
+
