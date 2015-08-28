@@ -682,7 +682,8 @@ section#clients {
 }
 
 section#contact {
-    background: #222;
+    background: url(../nyc.jpg);
+    background-size: cover;
     color: #fff;
 
     header.site-title {
