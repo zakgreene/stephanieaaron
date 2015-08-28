@@ -686,8 +686,13 @@ section#contact {
     background-size: cover;
     color: #fff;
 
+    & > .wrapper > h1 {
+        color: $red;
+    }
+
     header.site-title {
         z-index: 100;
+        color: #fff;
 
         .wrapper {
             background-image: url(../logo_red.png);
@@ -713,6 +718,10 @@ section#contact {
         }
     }
 
+    #call {
+        cursor: pointer;
+    }
+
     li a:before, #call:before {
         @include icon;
         color: #fff;
@@ -727,8 +736,8 @@ section#contact {
         @include transition;
     }
 
-    li a:hover {
-        &:before {
+    li:hover {
+        a:before, &#call:before {
             color: $red;
             background: #fff;
         }
