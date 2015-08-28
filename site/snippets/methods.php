@@ -1,7 +1,6 @@
 <section id="methods" data-nav="about"><div class="wrapper">
 
-	<header class="site-title"><div class="wrapper">&nbsp;
-	</div></header>
+	<?php snippet('site-title') ?>
 
 	<header class="title">
 	    <h2><?php echo $data->parent()->title()->html() ?></h2>

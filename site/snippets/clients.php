@@ -1,7 +1,6 @@
 <section id="clients"><div class="wrapper">
 
-	<header class="site-title"><div class="wrapper">&nbsp;
-	</div></header>
+	<?php snippet('site-title') ?>
 
     <h1><?php echo $data->title()->html() ?></h1>
     

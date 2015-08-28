@@ -2,4 +2,19 @@ Title: Home
 
 ----
 
-Text: I use tools to make the world clear for people.
+Text: I use tools to make the world <span class="adjective">clear</span> for people.
+
+----
+
+Adjectives: 
+
+- 
+  title: clear
+- 
+  title: findable
+- 
+  title: accessible
+- 
+  title: delightful
+- 
+  title: learnable

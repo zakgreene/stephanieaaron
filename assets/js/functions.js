@@ -29,7 +29,17 @@
 		$("a[href='#more']").click(function() {
 			$(this).parent().parent().find(".more").slideToggle(speed);
 			$(this).toggleClass("active");
-		})
+		});
+
+		$("#methods-list a[href='#more']").click( function() {
+			$(this).parent().parent().toggleClass("active");
+		});
+
+		$("#process svg").hover( function() {
+			var id = $(this).attr("id");
+
+			$("h3#" + id + "-title").toggleClass("on");
+		});
 
 
 		// smooth scrolling
@@ -46,6 +56,11 @@
 			  }
 			}
 		});
+
+
+		// insert words list into intro
+
+		$("#intro span.adjective").html($("#intro #adjectives"));
 	
 	});
 	
@@ -65,17 +80,17 @@
 			else
 				var section = $(this).attr("id");
 
-			if ($(this).offset().top <= scroll + 55) {
-				$(this).find("header.site-title").show();
-				$(this).find("header.site-title").css("position", "fixed");
-				$("footer nav a").removeClass("active");
-				$("footer nav a[href='#" + section + "']").addClass("active");
-			}
-			else {
-				$(this).find("header.site-title").hide();
-				$(this).find("header.site-title").css("position", "absolute");
-				// $("footer nav").find("a[href='#" + section + "']").removeClass("active");
-			}
+			// if ($(this).offset().top <= scroll + 55) {
+			// 	$(this).find("header.site-title").show();
+			// 	$(this).find("header.site-title").css("position", "fixed");
+			// 	$("footer nav a").removeClass("active");
+			// 	$("footer nav a[href='#" + section + "']").addClass("active");
+			// }
+			// else {
+			// 	$(this).find("header.site-title").hide();
+			// 	$(this).find("header.site-title").css("position", "absolute");
+			// 	// $("footer nav").find("a[href='#" + section + "']").removeClass("active");
+			// }
 		});
 	});
 

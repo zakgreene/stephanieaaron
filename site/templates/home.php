@@ -1,11 +1,17 @@
 <?php snippet('header') ?>
 
-<section id="intro"><div class="wrapper">
+<section id="intro">
 
-    <header class="site-title"><div class="wrapper">&nbsp;
-    </div></header>
+    <?php snippet('site-title') ?>
+    <div class="wrapper">
 
-    <h1><?php echo $page->text()->html() ?></h1>
+    <h3><?php echo $page->text()->html() ?></h3>
+
+    <ul id="adjectives">
+        <?php foreach($page->adjectives()->yaml() as $adj): ?>
+        <li id="<?php echo str_replace(" ", "_", strtolower($adj['title'])) ?>"><?php echo $adj['title'] ?></li>
+        <?php endforeach ?>
+    </ul>
 
 </div></section>
 

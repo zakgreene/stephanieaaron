@@ -2,7 +2,7 @@
 
   <?php snippet('menu') ?>
 
-  <a href="#more"><i class="icon-plus"></i></a>
+  <!-- <a href="#more"><i class="icon-plus"></i></a> -->
 
   <div class="more">
   	<?php echo $site->copyright()->kirbytext() ?>
