@@ -940,11 +940,11 @@ footer {
         .columns {
             float: right;
             width: 74%;
-        }
 
-        & > .wrapper > h2 {
-            font-size: 1.05em;
-            margin-bottom: 0.5em;
+            h2 {
+                font-size: 1.05em;
+                margin-bottom: 0.5em;
+            }
         }
 
         .col {
