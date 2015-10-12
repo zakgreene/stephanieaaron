@@ -24,6 +24,7 @@
 	
 		$("#bio h3").click( function() {
 			$(this).next().slideToggle(speed);
+			$(this).toggleClass("active");
 		});
 
 		$("a[href='#more']").click(function() {
