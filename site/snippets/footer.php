@@ -2,10 +2,22 @@
 
   <?php snippet('menu') ?>
 
-  <!-- <a href="#more"><i class="icon-plus"></i></a> -->
+  <a href="#more"><i class="icon-plus-circle"></i></a>
+</div>
 
-  <div class="more">
+
+<div class="more"><div class="wrapper">
+
   	<?php echo $site->copyright()->kirbytext() ?>
+
+    <ul>
+      <?php foreach($pages->find("contact")->contacts()->yaml() as $contact): ?>
+        <?php if ($contact['link']): ?>
+          <li id="<?php echo strtolower($contact['title']) ?>">
+          <a href="<?php echo $contact['link'] ?>" target="_blank"></a></li>
+        <?php endif ?>
+      <?php endforeach ?>
+    </ul>
   </div>
 
 </div></footer>
