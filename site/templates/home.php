@@ -2,16 +2,39 @@
 
 <section id="intro">
 
+    <div id="screen"></div>
+
     <?php snippet('site-title') ?>
     <div class="wrapper">
 
     <h3><?php echo $page->text()->html() ?></h3>
 
-    <ul id="adjectives">
+    <?php if ($page->files()->find('tools.png')): ?>
+    <img id="tools" src="<?php echo $page->files()->find('tools.png')->url() ?>" />
+    <?php endif ?>
+
+    <?php if ($page->files()->find('world.png')): ?>
+    <img id="world" src="<?php echo $page->files()->find('world.png')->url() ?>" />
+    <?php endif ?>
+
+    <ul id="adjectives" class="cycle-slideshow"
+        data-cycle-slides="> li"
+        data-cycle-speed="100"
+        data-cycle-timeout="900"
+        >
         <?php foreach($page->adjectives()->yaml() as $adj): ?>
         <li id="<?php echo str_replace(" ", "_", strtolower($adj['title'])) ?>"><?php echo $adj['title'] ?></li>
         <?php endforeach ?>
     </ul>
+
+    <div id="people" class="cycle-slideshow"
+        data-cycle-speed="300"
+        data-cycle-timeout="700"
+        >
+        <?php foreach($page->files()->filterBy('filename', '*=', 'person') as $person): ?>
+        <img src="<?php echo $person->url() ?>" />
+        <?php endforeach ?>
+    </div>
 
 </div></section>
 

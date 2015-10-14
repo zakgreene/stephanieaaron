@@ -21,6 +21,17 @@
 		// var ww = $(window).width();
 		// if (ww >= 600)
 		$("section").css("min-height", wh);
+
+
+
+		// insert words list into intro
+
+		$("#intro span.tools").html($("#intro #tools"));
+		$("#intro span.world").html($("#intro #world"));
+
+		$("#intro span.adjective").html($("#intro #adjectives"));
+		$("#intro span.people").html($("#intro #people"));
+
 	
 		$("#bio h3").click( function() {
 			$(this).next().slideToggle(speed);
@@ -59,9 +70,8 @@
 		});
 
 
-		// insert words list into intro
-
-		$("#intro span.adjective").html($("#intro #adjectives"));
+		// fade out intro screen when page is loaded
+		$("section#intro #screen").css("opacity", "0");
 	
 	});
 	

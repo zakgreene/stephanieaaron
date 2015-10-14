@@ -17,39 +17,38 @@ Methods:
     * User Research
     * User Interviews
     * Web analytics
+    * Surveys
+    * Heuristic evaluations
 - 
   title: Define
   desc: |
-    * Competitive Reviews
-    * Content Audits
-    * Stakeholder Interviews
-    * User Research
-    * User Interviews
-    * Web analytics
+    * Brainstorming
+    * Site maps
+    * Process flows
+    * Personas
+    * Preliminary sketches
+    * User journeys
 - 
   title: Design
   desc: |
-    * Competitive Reviews
-    * Content Audits
-    * Stakeholder Interviews
-    * User Research
-    * User Interviews
-    * Web analytics
+    * Wireframes
+    * Prototyping
+    * User testing
+    * Visual design
 - 
   title: Develop
   desc: |
-    * Competitive Reviews
-    * Content Audits
-    * Stakeholder Interviews
-    * User Research
-    * User Interviews
-    * Web analytics
+    * Site specifications
+    * Design specifications
+    * Prototyping
+    * User testing
+    * Quality assurance
+    * Troubleshooting
 - 
   title: Deploy
   desc: |
-    * Competitive Reviews
-    * Content Audits
-    * Stakeholder Interviews
-    * User Research
-    * User Interviews
+    * Quality assurance
+    * Troubleshooting
     * Web analytics
+    * User interviews
+    * Preparation for next phase

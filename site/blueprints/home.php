@@ -8,7 +8,8 @@ fields:
     type:  text
   text:
     label: Text
-    type:  text
+    type:  textarea
+    buttons: false
   adjectives:
     label: Adjectives
     type:  structure

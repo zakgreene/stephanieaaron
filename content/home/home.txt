@@ -2,7 +2,7 @@ Title: Home
 
 ----
 
-Text: I use tools to make the world <span class="adjective">clear</span> for people.
+Text: I use <span class="tools">tools</span> to make the <span class="world">world</span> <span class="adjective">clear</span> for<span class="people">people</span>
 
 ----
 

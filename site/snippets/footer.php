@@ -28,6 +28,7 @@
 
 <!-- this is where we put our custom functions -->
 <!-- don't forget to concatenate and minify if needed -->
+<script src="assets/js/libs/jquery.cycle2.min.js"></script>
 <script src="assets/js/functions.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
