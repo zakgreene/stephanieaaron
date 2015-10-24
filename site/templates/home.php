@@ -20,7 +20,7 @@
     <ul id="adjectives" class="cycle-slideshow"
         data-cycle-slides="> li"
         data-cycle-speed="100"
-        data-cycle-timeout="900"
+        data-cycle-timeout="<?php echo $page->adj_speed()->int() - 100 ?>"
         >
         <?php foreach($page->adjectives()->yaml() as $adj): ?>
         <li id="<?php echo str_replace(" ", "_", strtolower($adj['title'])) ?>"><?php echo $adj['title'] ?></li>
@@ -29,7 +29,7 @@
 
     <div id="people" class="cycle-slideshow"
         data-cycle-speed="300"
-        data-cycle-timeout="700"
+        data-cycle-timeout="<?php echo $page->people_speed()->int() - 300 ?>"
         >
         <?php foreach($page->files()->filterBy('filename', '*=', 'person') as $person): ?>
         <img src="<?php echo $person->url() ?>" />

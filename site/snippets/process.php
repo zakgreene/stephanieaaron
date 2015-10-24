@@ -38,7 +38,6 @@
         <!-- end arrows -->
 
 
-        <h3 id="listen-title">Listen</h3>
         <svg version="1.1" id="listen" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="199px" height="206px" viewBox="-318 212.3 199 206" enable-background="new -318 212.3 199 206" xml:space="preserve">
             <g>
@@ -72,9 +71,9 @@
                     c0.3,0.8,0.2,1.7-0.2,2.5c-0.4,0.8-1.1,1.4-2,1.6C-303.9,340.4-304.3,340.5-304.6,340.5z"/>
             </g>
         </svg>
+        <h3 id="listen-title">Listen</h3>
 
 
-        <h3 id="think-title">Think</h3>
         <svg version="1.1" id="think" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="173.3px" height="170px" viewBox="0 0 173.3 170" enable-background="new 0 0 173.3 170" xml:space="preserve">
             <path fill="#FFFFFF" d="M170,85c0,46.4-37.6,84-84,84c-46.4,0-84-37.6-84-84C2,38.6,39.6,1,86,1C132.4,1,170,38.6,170,85"/>
@@ -113,9 +112,9 @@
                     />
             </g>
         </svg>
+        <h3 id="think-title">Think</h3>
 
 
-        <h3 id="make-title">Make</h3>
         <svg version="1.1" id="make" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="184px" height="173.3px" viewBox="-303 220.7 184 173.3" enable-background="new -303 220.7 184 173.3"
          xml:space="preserve">
@@ -161,6 +160,7 @@
     c-0.8,4.5-5.3,9.9-10.8,11.8c-14.2,4.8-29.5-18.8-47.8-14.8c-11.3,2.5-18.5,11.8-17.5,24.5"/>
             </g>
         </svg>
+        <h3 id="make-title">Make</h3>
 
     </div>
 

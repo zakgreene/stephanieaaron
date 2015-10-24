@@ -182,10 +182,6 @@ section {
 }
 
 section#intro {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: #000;
 
     #screen {
@@ -200,17 +196,14 @@ section#intro {
     }
 
     & > .wrapper {
-        padding-top: 0;
-    }
-
-    & > .wrapper {
+        padding: 0;
         max-width: none;
     }
 
     h3 {
-        font-size: 2.25em;
+        font-size: 2em;
         line-height: 1.33em;
-        margin: 0 0 2em;
+        margin: 4em 0 2em;
         text-align: center;
         position: relative;
         z-index: 50;
@@ -220,7 +213,7 @@ section#intro {
     h3 img {
         display: inline-block;
         vertical-align: middle;
-        width: 200px;
+        width: 5.25em;
         margin: 0.25em 0;
     }
 
@@ -230,13 +223,18 @@ section#intro {
     }
 
     #world {
-        width: 160px;
+        width: 4em;
+    }
+
+    span.make:after, span.adjective:after {
+        content: '\A';
+        white-space: pre;
     }
 
     #adjectives {
         display: inline-block;
         position: relative;
-        width: 6.5em;
+        width: 6em;
 
         li {
             position: absolute;
@@ -248,7 +246,7 @@ section#intro {
             width: 7em;
             color: $red;
             @include title-font;
-            font-size: 0.9em;
+            font-size: 0.85em;
             text-transform: uppercase;
             // opacity: 0;
             // animation: fade 5s infinite;
@@ -283,7 +281,12 @@ section#intro {
     #people {
         display: inline-block;
         vertical-align: middle;
-        width: 180px;
+        width: 4.5em;
+        margin-top: -0.4em;
+
+        img {
+            margin: 0;
+        }
     }
 }
 
@@ -512,14 +515,19 @@ section#process {
 
     #process-animation {
         position: relative;
-        min-height: 600px;
-
-        svg, article, h3 {
-            position: absolute;
-        }
+        text-align: center;
 
         svg, h3 {
             cursor: pointer;
+            margin: 0 auto;
+        }
+
+        svg {
+            margin-top: 5em;
+        }
+
+        #listen {
+            margin-top: 2em;
         }
 
         h3 {
@@ -531,120 +539,25 @@ section#process {
             &.on, &:hover {
                 color: $red;
             }
-
-            &#listen-title {
-                top: 7em;
-                left: 17.5%;
-                margin-left: -3.5em;
-            }
-
-            &#think-title {
-                top: 7em;
-                right: 17.5%;
-                margin-right: -3.25em;
-            }
-
-            &#make-title {
-                top: 23em;
-                left: 50%;
-                margin-left: -1.5em;
-            }
-        }
-
-        #listen {
-            top: 1.5em;
-            left: 17.5%;
-            margin-left: -1.5%;
-
-            #waves path {
-                opacity: 0;
-            }
-
-            &:hover {
-                #waves path {
-                    animation: listen1 1.5s infinite;
-                    animation-delay: -0.5s;
-
-                    &:nth-child(2) {
-                        animation-name: listen2;
-                    }
-
-                    &:nth-child(3) {
-                        animation-name: listen3;
-                    }
-                }       
-            }
-        }
-
-        #think {
-            top: 3.5em;
-            right: 17.5%;
-
-            #dots path {
-                opacity: 0;
-            }
-
-            &:hover {
-                #dots path {
-                    animation: think 1.5s infinite;
-                    animation-delay: -1s;
-
-                    &:nth-child(2) {
-                        animation-delay: -0.25s;
-                    }
-
-                    &:nth-child(3) {
-                        animation-delay: -0.5s;
-                    }
-
-                    &:nth-child(4) {
-                        animation-delay: 0.25s;
-                    }
-
-                    &:nth-child(5) {
-                        animation-delay: 0.5s;
-                    }
-
-                    &:nth-child(6) {
-                        animation-delay: 0.75s;
-                    }
-                }
-            }
-        }
-
-        #make {
-            left: 50%;
-            margin-left: -90px;
-            top: 23em;
-
-            &:hover #line path {
-                fill: none;
-                stroke: $red;
-                stroke-width: 8;
-                stroke-dasharray: 400;
-                stroke-dashoffset: 400;
-                -webkit-animation: dash 2s linear infinite;
-                animation: dash 2s linear infinite;
-            }
         }
 
         #arrow_1 {
-            left: 33%;
-            width: 34.5%;
+            display: none;
         }
 
-        #arrow_2 {
-            width: 34%;
-            right: 15%;
-            top: 15.5em;
-            transform: rotate(110deg);
+        #arrow_2, #arrow_3 {
+            position: absolute;
+            transform: rotate(92deg);
+            height: 5em;
+            top: 12.5em;
+            left: 50%;
+            margin-left: -46px;
         }
 
         #arrow_3 {
-            width: 34%;
-            left: 20.5%;
-            top: 20em;
-            transform: rotate(-138deg);
+            top: 31.5em;
+            transform: rotate(270deg);
+            margin-left: -287px;
         }
     }
 }
@@ -964,6 +877,32 @@ footer {
         padding-top: 8em;
     }
 
+
+    section#intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            margin-top: -1em;
+            font-size: 2.25em;
+        }
+
+        span.make:after, span.adjective:after {
+            content: '';
+            white-space: auto;
+        }
+
+        span.world:after {
+            content: '\A';
+            white-space: pre;
+        }
+
+        #people {
+            margin-top: 0;
+        }
+    }
+
     section#bio {
 
         header.title {
@@ -992,6 +931,143 @@ footer {
         aside {
             width: 25%;
             float: right;
+        }
+    }
+
+    section#process {
+
+        #process-animation {
+            min-height: 600px;
+
+            svg, article, h3 {
+                position: absolute;
+            }
+
+            svg {
+                margin: 0;
+            }
+
+            h3 {
+
+                &#listen-title {
+                    top: 7em;
+                    left: 17.5%;
+                    margin-left: -3.5em;
+                }
+
+                &#think-title {
+                    top: 7em;
+                    right: 17.5%;
+                    margin-right: -3.25em;
+                }
+
+                &#make-title {
+                    top: 24em;
+                    left: 50%;
+                    margin-left: -1.5em;
+                }
+            }
+
+            #listen {
+                top: 1.5em;
+                left: 17.5%;
+                margin-top: 0;
+                margin-left: -1.5%;
+
+                #waves path {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    #waves path {
+                        animation: listen1 1.5s infinite;
+                        animation-delay: -0.5s;
+
+                        &:nth-child(2) {
+                            animation-name: listen2;
+                        }
+
+                        &:nth-child(3) {
+                            animation-name: listen3;
+                        }
+                    }       
+                }
+            }
+
+            #think {
+                top: 3.5em;
+                right: 17.5%;
+
+                #dots path {
+                    opacity: 0;
+                }
+
+                &:hover {
+                    #dots path {
+                        animation: think 1.5s infinite;
+                        animation-delay: -1s;
+
+                        &:nth-child(2) {
+                            animation-delay: -0.25s;
+                        }
+
+                        &:nth-child(3) {
+                            animation-delay: -0.5s;
+                        }
+
+                        &:nth-child(4) {
+                            animation-delay: 0.25s;
+                        }
+
+                        &:nth-child(5) {
+                            animation-delay: 0.5s;
+                        }
+
+                        &:nth-child(6) {
+                            animation-delay: 0.75s;
+                        }
+                    }
+                }
+            }
+
+            #make {
+                left: 50%;
+                margin-left: -90px;
+                top: 23em;
+
+                &:hover #line path {
+                    fill: none;
+                    stroke: $red;
+                    stroke-width: 8;
+                    stroke-dasharray: 400;
+                    stroke-dashoffset: 400;
+                    -webkit-animation: dash 2s linear infinite;
+                    animation: dash 2s linear infinite;
+                }
+            }
+
+            #arrow_1 {
+                left: 33%;
+                width: 34.5%;
+                display: block;
+            }
+
+            #arrow_2 {
+                width: 34%;
+                right: 15%;
+                top: 15.5em;
+                transform: rotate(110deg);
+                margin-left: 0;
+                height: auto;
+            }
+
+            #arrow_3 {
+                width: 34%;
+                left: 20.5%;
+                top: 20em;
+                transform: rotate(-138deg);
+                margin-left: 0;
+            }
         }
     }
 
@@ -1098,11 +1174,33 @@ footer {
     }
 }
 
+
+@media screen and (min-width: 920px) {
+
+    section#intro {
+
+        span.world:after {
+            content: '';
+            white-space: auto;
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     
 
     body {
         font-size: 16px;
+    }
+
+    section#process {
+
+        #process-animation {
+
+            h3#make-title {
+                top: 23em;
+            }
+        }
     }
 
     section#clients .col {

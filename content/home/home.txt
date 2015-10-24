@@ -2,7 +2,7 @@ Title: Home
 
 ----
 
-Text: I use <span class="tools">tools</span> to make the <span class="world">world</span> <span class="adjective">clear</span> for<span class="people">people</span>
+Text: I use <span class="tools">tools</span> to <span class="make">make</span> the <span class="world">world</span> <span class="adjective">clear</span> for<span class="people">people</span>
 
 ----
 
@@ -18,3 +18,11 @@ Adjectives:
   title: delightful
 - 
   title: learnable
+
+----
+
+Adj-speed: 1001
+
+----
+
+People-speed: 1000
